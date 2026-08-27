@@ -20,12 +20,16 @@
         </div>
         
         <h1>My Portfolio:</h1>
-        <p>I am Sam, and I enjoy programming in Python, Rust and C#, I also love maths and problem solving. My particular areas of interest currently include machine learning research in reinforcement learning and program synthesis. Some hobbies I have include philosophy, films and reading. I am currently studying Computer Science and Artificial Intelligence at the University of Bath.</p>
+        <p>I am Sam, and I enjoy programming in Python, Rust and C#, I also love maths and problem solving. I am particularly interested in Reinforcement Learning research. Some hobbies I have include philosophy, films and reading. I am currently a second year student of Computer Science and Artificial Intelligence at the University of Bath.</p>
     </div>
 
     <!-- Gallery -->
     <div class="gallery-container">
         <div class="gallery" id="gallery">
+            <div class="slide" style="background-color: #3B5266;" data-target="skills">
+                <h2>Skills:</h2>
+                <p>Click Here to see my key skills</p>
+            </div>
             <div class="slide" style="background-color: #2c3e50;" data-target="section1">
                 <h2>Personal Projects:</h2>
                 <p>Click Here to see Personal Projects I have done</p>
@@ -45,43 +49,56 @@
 
     <!-- Content -->
     <div class="content">
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Haskell</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>ML &amp; Scientific Computing</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JAX</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Pandas</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools &amp; Technical</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Weights &amp; Biases</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">SSH</span>
+                        <span class="skill-tag">Zotero</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Domains</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Reinforcement Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Research</span>
+                        <span class="skill-tag">Software Engineering</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="section1">
             <center>
                 <h1><b>Personal Projects:</b></h1>
 
-                <h2>Unity C# Projects:</h2>
-
-                <h3>Quasar Quest</h3>
-                <div class="video">
-                    <iframe src="https://www.youtube.com/embed/H1mh_E8JXX0?si=FVyHunhXLPLGhEu_" title="YouTube video player" allowfullscreen></iframe>
-                </div>
-                <p>Quasar Quest is set in a procedurally generated galaxy, you dodge cosmic obstacles to get a higher score, get coins to buy upgrades for your ship or new ship skins. You can also complete infinitely many automatically generated missions for coins. I made Quasar Quest in Unity C# in the summer of 2024.</p>
-                <br>
-
-                <h3>Mobile Apps</h3>
-                <div class="video-container">
-                    <div class="video">
-                        <iframe src="https://www.youtube.com/embed/1H9mcVTjLgU" title="YouTube video player" allowfullscreen></iframe>
-                    </div>
-                    <div class="video">
-                        <iframe src="https://www.youtube.com/embed/E_doF_Gnd5k" title="YouTube video player" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <p>In 2021 I created several mobile games for the mobile Android platform, available on the google play store. I programmed these games in C#/Unity. This taught me skills in mobile app development, releasing different versions of games for the google playstore, and optimizing apps across devices. The above games are available on the google play store for free. Here is the download page for <a href="https://play.google.com/store/apps/details?id=com.pixel43.jestingjetpacker">Jesting Jetpacker</a>. Here is the download page for <a href="https://play.google.com/store/apps/details?id=com.Pixel43.BallHop">Ball Hop</a>.</p>
-                <br>
-                
-                <a href="https://github.com/IronHead43/CSharp" target="_blank">
-                    <img class="github-button" src="cSharpUnity.png" alt="My C#/Unity projects">
-                </a>
-                <p class="small-text">A GitHub repository of my Unity C# projects code</p>
-                <br><br><br>
-
-                <img src="project euler.png" alt="project euler logo" style="max-width: 400px; margin: 0 auto;">
-                <p>I enjoy writing solutions to programming problems on websites such as Project Euler, CodeForces and LeetCode. I love the problem solving for the higher number Project Euler problems, utilising concepts from mathematics such as number theory or even graph theory. I also enjoy occasionaly joining programming competitions on CodeForces. I tend to write my solutions in Python but I have started writing several in Rust for its efficiency.</p>
-                <a href="https://github.com/SamMiller3/programming-challenges" target="_blank">
-                    <img class="github-button" src="programming challenges.png" alt="My programming challenges">
-                </a>
-                <p class="small-text">A GitHub repository of my solutions to different programming challenges</p>
+                <h2>jaxhrl &ndash; Hierarchical RL in JAX</h2>
+                <p>jaxhrl is an open-source codebase of hierarchical reinforcement learning algorithms implemented in pure JAX, which I built with another intern at the Bath Reinforcement Learning Lab. It provides reproducable verification of each algorithm based on the original paper's experiments. I wrote the algorithms with resource constraints so optimised all algorithms to work on minimal VRAM to avoid OOM errors. When running on an H100 GPU with 1024 environments in parallel it could complete 100,000 environment steps a second.</p>
+                <a class="repo-button" href="https://github.com/bath-reinforcement-learning-lab/jaxhrl" target="_blank">View jaxhrl on GitHub</a>
                 <br><br><br>
 
                 <h2>Toy Interpreter</h2>
@@ -97,24 +114,35 @@
                     <li>Simple but complete language supporting variables, conditionals, loops (via goto), and I/O</li>
                 </ul>
                 <p>Some example programs included a binary search guessing game, the Euclidean algorithm, calculating the first n Fibonacci numbers, approximating Eulers number to arbitrary precision amongst others.</p>
-            
-                <a href="https://github.com/IronHead43/CSharp" target="_blank">
-                    <img class="github-button" src="Toy Interpreter.png" alt="My Toy Interpreter">
-                </a>
-                <p class="small-text">A GitHub repository of the code for the interpreter as well as the example programs</p>
+
+                <a class="repo-button" href="https://github.com/IronHead43/CSharp" target="_blank">View the Toy Interpreter on GitHub</a>
+                <br><br><br>
+
+                <h2>Competitive Programming &amp; Problem Solving</h2>
+                <img src="project euler.png" alt="project euler logo" style="max-width: 400px; margin: 0 auto;">
+                <p>I enjoy writing solutions to programming problems on websites such as Project Euler, CodeForces and LeetCode. I love the problem solving for the higher number Project Euler problems, utilising concepts from mathematics such as number theory or even graph theory. I also enjoy occasionally joining programming competitions on CodeForces. I tend to write my solutions in Python but I have started writing several in Rust for its efficiency.</p>
+                <a class="repo-button" href="https://github.com/SamMiller3/programming-challenges" target="_blank">View my solutions on GitHub</a>
+
+                                <br><br><br>
+
+                <h2>Earlier Game Development</h2>
+                <p>When I was 13 I built games in Unity and C#. In 2021 I released several mobile games on the Google Play store &ndash; <a href="https://play.google.com/store/apps/details?id=com.pixel43.jestingjetpacker" target="_blank">Jesting Jetpacker</a> and <a href="https://play.google.com/store/apps/details?id=com.Pixel43.BallHop" target="_blank">Ball Hop</a> &ndash; which taught me about shipping and maintaining releases and optimising across devices. In 2024 I made <a href="https://www.youtube.com/watch?v=H1mh_E8JXX0" target="_blank">Quasar Quest</a>, an endless arcade game set in a procedurally generated galaxy with automatically generated missions and an in-game upgrade economy. The code lives in my <a href="https://github.com/IronHead43/CSharp" target="_blank">Unity C# repository</a>.</p>
             </center>
         </section>
 
         <section id="section2">
             <h2>Professional Experience</h2>
-            <h3>Bath Reinforcement Learning Lab: Research Intern (September 2025 - Current)</h3>
-            <p>Working on Skill Hierarchies in Reinforcement Learning, specifically focussing on temporal abstraction and intrinsic motivation using graph algorithms. Attend research meetings, help code environments, organise the codebase and read relevant papers.</p>
-            <p><b>Skills learnt/used:</b> Technical paper analysis, version control (Git), experimental design and testing, debugging complex algorithms, research documentation, critical evaluation of methodologies.</p>
+
+            <h3>Bath Reinforcement Learning Lab &ndash; Research Intern (Summer 2026)</h3>
+            <p>A paid internship in hierarchical reinforcement learning. With another intern I built <a href="https://github.com/bath-reinforcement-learning-lab/jaxhrl" target="_blank">jaxhrl</a>, an open-source library of hierarchical RL algorithms in JAX, after grounding the work in the foundational and current literature. We benchmarked the algorithms across a large suite of environments and are co-authoring a paper on the results. Separately, I ran graph clustering algorithms on state-transition graphs to build skill hierarchies for a PhD student's NeurIPS submission, and maintained the group's codebase with integration and unit tests.</p>
+
+            <h3>Bath Reinforcement Learning Lab &ndash; Volunteer Research Assistant (2025 &ndash; Present)</h3>
+            <p>Ongoing volunteer work with the lab on skill hierarchies in reinforcement learning. I attend research meetings, help code environments, organise the codebase and keep up with relevant papers, and will continue this alongside my studies.</p>
         </section>
 
         <section id="section3">
             <h2>Education</h2>
-            <p>Currently a student at Bath University studying Computer Science and Artificial Intelligence.</p>
+            <p>Currently a student at Bath University studying Computer Science and Artificial Intelligence. First year I got an average result of 80% (a first class).</p>
             <p>A Levels: At A Levels I achieved A*A*AA in Maths, Computer Science, Further Maths and an EPQ in machine learning. I achieved the top mark in my school in Maths and Computer Science.</p>
         </section>
     </div>
